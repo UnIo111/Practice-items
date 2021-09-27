@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* img {
+            widows: 300px;
+        } */
+        /* div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        } */
+        /* .box {
+            position: relative;
+            width: 400px;
+            border-bottom: 1px solid #ccc;
+            margin: 100px auto;
+        } */
+        /* .box input {
+            width: 370px;
+            height: 30px;
+            border: 0;
+            outline: none;
+        } */
+        /* .box img {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            width: 24px;
+        } */
+        /* .box {
+            position: relative;
+            width: 74px;
+            height: 88px;
+            border: 1px solid #ccc;
+            margin: 100px auto;
+            font-size: 12px;
+            text-align: center;
+            color: #f40;
+            display: block;
+        }
+        
+        .box img {
+            width: 60px;
+            margin-top: 5px;
+        }
+         */
+        /* .close-btn {
+            position: absolute;
+            top: -1px;
+            left: -16px;
+            width: 14px;
+            height: 14px;
+            border: 1px aolid #ccc;
+            line-height: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style-type: none;
+        }
+        
+        .box {
+            width: 250px;
+            margin: 100px auto;
+        }
+        
+        .box li {
+            float: left;
+            width: 24px;
+            height: 24px;
+            background-color: pink;
+            margin: 15px;
+            background: url(images/sprite.png) no-repeat;
+        }
+        
+        input {
+            color: #999;
+        } */
+        
+        div {
+            width: 600px;
+            margin: 100px auto;
+        }
+        
+        .message {
+            display: inline-block;
+            font-style: 12px;
+            color: #999;
+            background: url(images/mess.png) no-repeat left center;
+            padding-left: 20px;
+        }
+        
+        .wrong {
+            color: red;
+            background-image: url(images/wrong.png);
+        }
+        
+        .right {
+            color: green;
+            background-image: url(images/right.png);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="register">
+        <input type="password" class="ipt">
+        <p class="message">请输入6~16位密码</p>
+    </div>
+    <!-- <input type="text" value="手机">
+    <div class="box">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div> -->
+    <!-- <div class="box">
+        淘宝二维码
+        <img src="images/tao.png" alt="">
+        <i class="close-btn">×</i>
+    </div> -->
+
+    <!-- <div></div> -->
+
+    <!-- <div class="box">
+        <label for="">
+            <img src="images/close.png" alt="" id="eye">
+        </label>
+        <input type="password" name="" id="pwd">
+    </div> -->
+    <!-- <button>按钮</button>
+    <input type="text" value="输入内容">
+    <img src="images/s.gif" alt="">
+    <div>good morning</div> -->
+    <script>
+        // 1
+        var ipt = document.querySelector('.ipt');
+        var message = document.querySelector('.message');
+        // 2
+        ipt.onblur = function() {
+            if (this.value.length < 6 || this.value.length > 16) {
+                message.className = 'message wrong';
+                message.innerHTML = '不对不对';
+            } else {
+                message.className = 'message right';
+                message.innerHTML = '正确啦';
+            }
+        }
+
+
+        // // 1
+        // var text = document.querySelector('input');
+        // // 2 获得焦点事件 onfocus
+        // text.onfocus = function() {
+        //         if (this.value === '手机') {
+        //             this.value = '';
+        //         }
+        //         // 变黑文字
+        //         this.style.color = '#333';
+        //     }
+        //     // 3 失去焦点事件 onblur
+        // text.onblur = function() {
+        //     if (this.value === '') {
+        //         this.value = '手机';
+        //     }
+        //     // 变浅文字
+        //     this.style.color = '#999';
+        // }
+
+
+        // // 1
+        // var lis = document.querySelectorAll('li');
+        // for (var i = 0; i < lis.length; i++) {
+        //     // 让索引号 乘以 44 就是每个li 的背景y坐标  index就是我们的y坐标
+        //     var index = i * 44;
+        //     lis[i].style.backgroundPosition = '0 -' + index + 'px';
+        // }
+
+
+        // // 1 
+        // var btn = document.querySelector('.close-btn');
+        // var box = document.querySelector('.box');
+        // // 2
+        // btn.onclick = function() {
+        //     box.style.display = 'none';
+        // }
+
+
+        // // 1 
+        // var div = document.querySelector('div');
+        // // 2
+        // div.onclick = function() {
+        //     this.style.backgroundColor = 'purple';
+        //     this.style.width = '250px';
+        // }
+
+
+        // // 1 获取元素
+        // var eye = document.getElementById('eye');
+        // var pwd = document.getElementById('pwd');
+        // // 2 
+        // var flag = 0;
+        // eye.onclick = function() {
+        //     // 点击一次后flag一定要变化
+        //     if (flag == 0) {
+        //         pwd.type = 'text';
+        //         eye.src = 'images/open.png'
+        //         flag = 1;
+        //     } else {
+        //         pwd.type = 'password';
+        //         eye.src = 'images/close.png'
+        //         flag = 0;
+        //     }
+
+        // }
+
+
+
+        // // 1
+        // var btn = document.querySelector('button');
+        // var input = document.querySelector('input');
+        // // 2
+        // btn.onclick = function() {
+        //     // input.innerHTML只能修改普通盒子如div里面的内容
+        //     // 表单里面的值，文字内容是通过value来修改的
+        //     input.value = '被点击了';
+        //     // 如果想要某个表单被禁用不能再点击，用disabled。
+        //     // btn.disabled = true;
+        //     this.disabled = true;
+        //     // this指向的是事件函数的调用者(btn)
+        // }
+
+
+
+        // // 1 获取元素
+        // var img = document.querySelector('img');
+        // var div = document.querySelector('div');
+        // // 2 得到当前小时数
+        // var date = new Date();
+        // var h = date.getHours();
+        // // 3 判断小时数，改变图片和文字信息
+        // if (h < 12) {
+        //     img.src = 'images/s.gif';
+        //     div.innerHTML = '亲，上午好';
+        // } else if (h < 18) {
+        //     img.src = 'images/x.gif';
+        //     div.innerHTML = '亲，下午好';
+        // } else {
+        //     img.src = 'images/w.gif';
+        //     div.innerHTML = '亲，晚上好';
+        // }
+    </script>
+</body>
+
+</html>

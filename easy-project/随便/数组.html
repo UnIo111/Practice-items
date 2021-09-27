@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = [5, 4, 3, 2, 1];
+        for (var i = 0; i <= arr.length - 1; i++) {
+            for (var j = 0; j <= arr.length - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        console.log(arr);
+        /* var arr = ['red', 'green', 'blue', 'pink', 'purple'];
+        var newArr = [];
+        for (var i = arr.length - 1; i >= 0; i--) {
+            newArr[newArr.length] = arr[i]
+        }
+        console.log(newArr); */
+        /* var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        var newArr = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                newArr[newArr.length] = arr[i];
+            }
+        }
+        console.log(newArr); */
+        /* // 方法一
+        var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        var newArr = [];
+        var j = 0;
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] > 10) {
+                newArr[j] = arr[i];
+                j++;
+            }
+        }
+        console.log(newArr);
+        // 方法二
+        var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        var newArr = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] <= 10) {
+                newArr[newArr.length] = arr[i];
+            }
+        }
+        console.log(newArr); */
+        /* var arr = [];
+        for (var i = 0; i < 100; i++) {
+            arr[i] = i + 1;
+        }
+        console.log(arr); */
+        /* var arr = ['red', 'green', 'blue', 'pink'];
+        arr[4] = 'purple';
+        console.log(arr);
+        var str = '';
+        var sep = '!'
+        for (var i = 0; i < arr.length; i++) {
+            str += arr[i] + sep;
+        }
+        console.log(str); */
+        /* var arr = [2, 6, 1, 77, 52, 25, 7];
+        var max = arr[0];
+        for (var i = 1; i < arr.length; i++) {
+            if (arr[i] < max) {
+                max = arr[i];
+            }
+        }
+        console.log('最大值' + max); */
+        /* var arr = [2, 6, 1, 7, 4];
+        var sum = 0;
+        var average = 0;
+        for (var i = 0; i < arr.length; i++) {
+            sum += arr[i]; // 我们加的是数组元素arr[i]，不是计数器i。
+        }
+        average = sum / arr.length;
+        console.log(sum, average); */
+        /* var arrSanGuo = ['关羽', '张飞', '马超', '赵云', '黄忠', '刘备', '姜维'];
+        for (i = 0; i < arrSanGuo.length; i++) {
+            console.log(arrSanGuo[i]);
+        } */
+        /* var arrDate = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期天'];
+        console.log(arrDate[6]); */
+        /* var arr1 = [1, 2, 'pinklaoshi', true];
+        console.log(arr1[2]); */
+        // var arr = new Array();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

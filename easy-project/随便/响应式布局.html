@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        [class^=col] {
+            border: 1px solid cornflowerblue;
+        }
+        
+        .row>div {
+            height: 100px;
+            background-color: pink;
+        }
+        
+        .row1 div {
+            height: 200px;
+        }
+        
+        .row1 div:nth-child(3) {
+            background-color: rosybrown;
+        }
+        
+        .row1 .xianshi {
+            font-size: 50px;
+            font-weight: 700;
+            background-color: seagreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row row1">
+            <div class="col-xs-3 xianshi visible-lg">显示显示</div>
+            <div class="col-xs-3">2</div>
+            <div class="col-xs-3 hidden-md">隐藏隐藏隐藏隐藏隐藏隐藏</div>
+            <div class="col-xs-3">4</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-md-push-8">左侧</div>
+            <div class="col-md-8 col-md-pull-4">右侧</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">左侧</div>
+            <div class="col-md-4 col-md-offset-4">右侧</div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">zhongjian</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="row">
+                    <div class="col-md-6">a</div>
+                    <div class="col-md-6">b</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">2</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">3</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">4</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">1</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">2</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">3</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">4</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">1</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">2</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">3</div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">4</div>
+        </div>
+    </div>
+</body>
+
+</html>

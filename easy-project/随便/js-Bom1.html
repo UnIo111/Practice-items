@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        
+        div {
+            margin: 200px;
+        }
+        
+        span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+        } */
+        /* .login-header {
+            width: 100%;
+            text-align: center;
+            height: 30px;
+            font-size: 24px;
+            line-height: 30px;
+        }
+        
+        ul,
+        li,
+        ol,
+        dl,
+        dt,
+        dd,
+        div,
+        p,
+        span,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a {
+            padding: 0px;
+            margin: 0px;
+        }
+        
+        .login {
+            display: none;
+            width: 512px;
+            height: 280px;
+            position: fixed;
+            border: #ebebeb solid 1px;
+            left: 50%;
+            top: 50%;
+            background: #ffffff;
+            box-shadow: 0px 0px 20px #ddd;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+        }
+        
+        .login-title {
+            width: 100%;
+            margin: 10px 0px 0px 0px;
+            text-align: center;
+            line-height: 40px;
+            height: 40px;
+            font-size: 18px;
+            position: relative;
+            cursor: move;
+        }
+        
+        .login-input-content {
+            margin-top: 20px;
+        }
+        
+        .login-button {
+            width: 50%;
+            margin: 30px auto 0px auto;
+            line-height: 40px;
+            font-size: 14px;
+            border: #ebebeb 1px solid;
+            text-align: center;
+        }
+        
+        .login-bg {
+            display: none;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            background: rgba(0, 0, 0, .3);
+        }
+        
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+        
+        .login-button a {
+            display: block;
+        }
+        
+        .login-input input.list-input {
+            float: left;
+            line-height: 35px;
+            height: 35px;
+            width: 350px;
+            border: #ebebeb 1px solid;
+            text-indent: 5px;
+        }
+        
+        .login-input {
+            overflow: hidden;
+            margin: 0px 0px 20px 0px;
+        }
+        
+        .login-input label {
+            float: left;
+            width: 90px;
+            padding-right: 10px;
+            text-align: right;
+            line-height: 35px;
+            height: 35px;
+            font-size: 14px;
+        }
+        
+        .login-title span {
+            position: absolute;
+            font-size: 12px;
+            right: -20px;
+            top: -30px;
+            background: #ffffff;
+            border: #ebebeb solid 1px;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+        } */
+        
+        .slider-bar {
+            position: absolute;
+            left: 50%;
+            top: 300px;
+            margin-left: 600px;
+            width: 45px;
+            height: 130px;
+            background-color: pink;
+        }
+        
+        .w {
+            width: 1200px;
+            margin: 10px auto;
+        }
+        
+        .header {
+            height: 150px;
+            background-color: purple;
+        }
+        
+        .banner {
+            height: 250px;
+            background-color: skyblue;
+        }
+        
+        .main {
+            height: 1000px;
+            background-color: yellowgreen;
+        }
+        
+        span {
+            display: none;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="login-header"><a id="link" href="javascript:;">点击，弹出登录框</a></div>
+    <div id="login" class="login">
+        <div id="title" class="login-title">登录会员
+            <span><a id="closeBtn" href="javascript:void(0);" class="close-login">关闭</a></span>
+        </div>
+        <div class="login-input-content">
+            <div class="login-input">
+                <label>用户名：</label>
+                <input type="text" placeholder="请输入用户名" name="info[username]" id="username" class="list-input">
+            </div>
+            <div class="login-input">
+                <label>登录密码：</label>
+                <input type="password" placeholder="请输入登录密码" name="info[password]" id="password" class="list-input">
+            </div>
+        </div>
+        <div id="loginBtn" class="login-button"><a href="javascript:void(0);" id="login-button-submit">登录会员</a></div>
+    </div> -->
+    <!-- 遮盖层 -->
+    <!-- <div id="bg" class="login-bg"></div> -->
+
+    <!-- <div class="box"></div> -->
+    <!-- <button>点击</button>
+    <div></div> -->
+    <!-- 手机号码：<input type="number"> <button>发送</button> -->
+    <!-- <button class="begin">开始定时器</button>
+    <button class="stop">停止定时器</button> -->
+    <!-- <div>
+        <span class="hour">1</span>
+        <span class="minute">2</span>
+        <span class="second">3</span>
+    </div> -->
+    <!-- <button>点击停止定时器</button> -->
+    <!-- <img src="images/ad.jpg" alt="" class="ad"> -->
+
+
+    <!-- 仿淘宝固定侧边栏 -->
+    <div class="slider-bar">
+        <span class="goBack">返回顶部</span>
+    </div>
+    <div class="header w">头部区域</div>
+    <div class="banner w">banner区域</div>
+    <div class="main w">主体部分</div>
+    <script>
+        // 仿淘宝返回顶部
+        // 1 获取元素
+        var sliderbar = document.querySelector('.slider-bar');
+        var banner = document.querySelector('.banner');
+        // banner.offsetTop就是被卷去头部的大小，一定要写到滚动的外面
+        var bannerTop = banner.offsetTop;
+        // 当我们侧边栏固定定位之后应该变化的数值
+        var sliderbarTop = sliderbar.offsetTop - bannerTop;
+        // 获取main主体元素
+        var main = document.querySelector('.main');
+        var goBack = document.querySelector('.goBack');
+        var mainTop = main.offsetTop;
+        // 2 页面滚动事件 scroll
+        document.addEventListener('scroll', function() {
+            // window.pageYOffset 页面被卷去的头部
+            // console.log(window.pageYOffset);
+            // 3 当页面被卷去的头部大于等于172，此时侧边栏改为固定定位
+            if (window.pageYOffset >= bannerTop) {
+                sliderbar.style.position = 'fixed';
+                sliderbar.style.top = sliderbarTop + 'px';
+            } else {
+                sliderbar.style.position = 'absolute';
+                sliderbar.style.top = '300px';
+            }
+            // 4 当我们页面滚动到main盒子，就显示goback模块
+            if (window.pageYOffset >= mainTop) {
+                goBack.style.display = 'block';
+            } else {
+                goBack.style.display = 'none';
+            }
+        });
+        // 3 当点击了返回顶部模块，就让窗口滚动到页面最上方
+        goBack.addEventListener('click', function() {
+            // window.scroll(0, 0); // 里面的x和y不跟单位，直接写数字即可
+            animate(window, 0);
+        });
+        // 动画函数
+        // var obj = {};
+        // obj.name = 'andy';
+        // 简单动画函数封装obj目标对象 target目标位置
+        function animate(obj, target, callback) {
+            clearInterval(obj.timer); // 解决方案是：让元素只有一个定时器执行，先清除以前的定时器，只保留当前的一个定时器执行。
+            obj.timer = setInterval(function() { // 给不同元素指定了不同的定时器
+                // 步长要取整
+                // var step = Math.ceil((target - obj.offsetLeft) / 10);
+                var step = (target - window.pageYOffset) / 5;
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                if (window.pageYOffset == target) {
+                    // 停止动画本质是停止定时器
+                    clearInterval(obj.timer);
+                    // if (callback) { // 回调函数写到定时器结束里面
+                    //     callback(); // 调用函数
+                    // }
+                    callback && callback();
+                }
+                // 把每次加一的步长值改为一个慢慢变小的值，步长公式 = (目标值 - 现在的位置) / 10
+                // obj.style.left = window.pageYOffset + step + 'px';
+                window.scroll(0, window.pageYOffset + step)
+            }, 15);
+        }
+
+
+        // // 拖动模态框
+        // // 1 获取元素
+        // var login = document.querySelector('.login');
+        // var mask = document.querySelector('.login-bg');
+        // var link = document.querySelector('#link');
+        // var closeBtn = document.querySelector('#closeBtn');
+        // // 2 点击弹出层连接link，让mask和login显示出来
+        // link.addEventListener('click', function() {
+        //     mask.style.display = 'block';
+        //     login.style.display = 'block';
+        // });
+        // // 3 点击closeBtn，隐藏mask和login
+        // closeBtn.addEventListener('click', function() {
+        //     mask.style.display = 'none';
+        //     login.style.display = 'none';
+        // });
+        // // 4 开始拖拽
+        // // (1) 当按下鼠标，则获得鼠标在盒子内的坐标
+        // title.addEventListener('mousedown', function(e) {
+        //     var x = e.pageX - login.offsetLeft;
+        //     var y = e.pageY - login.offsetTop;
+        //     // (2) 鼠标移动时在页面中的坐标 - 鼠标在盒子内的坐标 = 模态框的left和top值
+        //     document.addEventListener('mousemove', move);
+
+        //     function move(e) {
+        //         login.style.left = e.pageX - x + 'px';
+        //         login.style.top = e.pageY - y + 'px';
+        //     }
+        //     // (3) 鼠标弹起，就让鼠标移动事件移除
+        //     document.addEventListener('mouseup', function() {
+        //         document.removeEventListener('mousemove', move);
+        //     });
+        // });
+
+
+
+
+        // // 鼠标在盒子内坐标
+        // var box = document.querySelector('.box');
+        // box.addEventListener('mousemove', function(e) {
+        //     var x = e.pageX - this.offsetLeft;
+        //     var y = e.pageY - this.offsetTop;
+        //     this.innerHTML = 'x坐标是' + x + 'y坐标是' + y;
+        // });
+
+
+        // // 1 先去掉？  substr('起始的位置'，截取几个字符);
+        // var params = location.search.substr(1); // uname = andy
+        // // 2 利用 = 把字符串分割为数组 split('=');
+        // var arr = params.split('='); // ["uname", "andy"]
+        // var div = document.querySelector('div');
+        // // 3 把数据写入div中
+        // div.innerHTML = arr[1] + '欢迎你';
+
+
+        // var btn = document.querySelector('button');
+        // var div = document.querySelector('div');
+        // btn.addEventListener('click', function() {
+        //     // console.log(location.href);
+        //     // location.href = 'http://www.itcast.cn';
+        // });
+        // var timer = 5;
+        // setInterval(function() {
+        //     if (timer == 0) {
+        //         location.href = 'http://www.itcast.cn';
+        //     } else {
+        //         div.innerHTML = '将在' + timer + '秒后跳转到首页';
+        //         timer--;
+        //     }
+        // }, 1000);
+
+
+        // var btn = document.querySelector('button');
+        // var time = 3; // 定义剩下的秒数
+        // btn.addEventListener('click', function() {
+        //     btn.disabled = true;
+        //     var timer = setInterval(function() {
+        //         if (time == 0) {
+        //             // 清除定时器和复原按钮
+        //             clearInterval(timer);
+        //             btn.disabled = false;
+        //             btn.innerHTML = '发送';
+        //             time = 3; // 重新开始
+        //         } else {
+        //             btn.innerHTML = '还剩下' + time + '秒';
+        //             time--;
+        //         }
+        //     }, 1000);
+        // });
+
+
+        // var begin = document.querySelector('.begin');
+        // var stop = document.querySelector('.stop');
+        // var timer = null; // 全局变量 null是一个空对象
+        // begin.addEventListener('click', function() {
+        //     timer = setInterval(function() {
+        //         console.log('你好吗');
+        //     }, 1000);
+        // });
+        // stop.addEventListener('click', function() {
+        //     clearInterval(timer);
+        // });
+
+
+        // // 1 倒计时
+        // var hour = document.querySelector('.hour');
+        // var minute = document.querySelector('.minute');
+        // var second = document.querySelector('.second');
+        // var inputTime = +new Date('2021-8-7 12:00:00'); // 返回的是用户输入时间总的毫秒数
+        // countDown(); // 我们先调用一次这个函数，防止第一次刷新页面有空白
+        // // 2 开启定时器
+        // setInterval(countDown, 1000);
+
+        // function countDown(time) {
+        //     var nowTime = +new Date();
+        //     var times = (inputTime - nowTime) / 1000; // time是剩余时间总的毫秒数           
+        //     var h = parseInt(times / 60 / 60 % 24); // 时
+        //     h = h < 10 ? '0' + h : h;
+        //     hour.innerHTML = h;
+        //     var m = parseInt(times / 60 % 60); // 分
+        //     m = m < 10 ? '0' + m : m;
+        //     minute.innerHTML = m;
+        //     var s = parseInt(times % 60); // 当前秒
+        //     s = s < 10 ? '0' + s : s;
+        //     second.innerHTML = s;
+        // }
+
+
+
+        // var btn = document.querySelector('button');
+        // var timer = setTimeout(function() {
+        //     console.log('爆炸了');
+        // }, 5000);
+        // btn.addEventListener('click', function() {
+        //     clearTimeout(timer);
+        // });
+        // setInterval(function() {
+        //     console.log('继续输出');
+        // }, 1000);
+
+
+        // var ad = document.querySelector('.ad');
+        // setTimeout(function() {
+        //     ad.style.display = 'none';
+        // }, 5000);
+
+
+        // window.addEventListener('load', function() {
+        //     var div = document.querySelector('div');
+        //     window.addEventListener('resize', function() {
+        //         if (window.innerWidth <= 800) {
+        //             div.style.display = 'none';
+        //         } else {
+        //             div.style.display = 'block';
+        //         }
+        //     });
+        // });
+
+
+        // window.onload = function() {
+        //     var btn = document.querySelector('button');
+        //     btn.addEventListener('click', function() {
+        //         alert('点击我');
+        //     });
+        // };
+        // window.addEventListener('load', function() {
+        //     var btn = document.querySelector('button');
+        //     btn.addEventListener('click', function() {
+        //         alert('点击我');
+        //     });
+        // });
+        // window.addEventListener('load', function() {
+        //     alert(22);
+        // });
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     alert(33);
+        // });
+    </script>
+    <!-- <div></div> -->
+    <!-- <button>点击</button> -->
+</body>
+
+</html>

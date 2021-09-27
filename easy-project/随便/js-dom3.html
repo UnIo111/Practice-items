@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* body {
+            background: url(images/1.jpg) no-repeat center top;
+        } */
+        
+        li {
+            list-style: none;
+        }
+        
+        .baidu {
+            overflow: hidden;
+            margin: 100px auto;
+            background-color: #fff;
+            width: 410px;
+            padding-top: 3px;
+        }
+        
+        .baidu li {
+            float: left;
+            margin: 0 1px;
+            cursor: pointer;
+        }
+        
+        .baidu img {
+            width: 100px;
+        }
+        /* table {
+            width: 800px;
+            margin: 100px auto;
+            text-align: center;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        
+        thead tr {
+            height: 30px;
+            background-color: skyblue;
+        }
+        
+        tbody tr {
+            height: 30px;
+        }
+        
+        tbody td {
+            border-bottom: 1px solid #d7d7d7;
+            font-size: 12px;
+            color: blue;
+        }
+        
+        .bg {
+            background-color: pink;
+        } */
+        /* .wrap {
+            width: 300px;
+            margin: 100px auto 0;
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #c0c0c0;
+            width: 300px;
+        }
+        
+        th,
+        td {
+            border: 1px solid #d0d0d0;
+            color: #404060;
+            padding: 10px;
+        }
+        
+        th {
+            background-color: #09c;
+            font: bold 16px "微软雅黑";
+            color: #fff;
+        }
+        
+        td {
+            font: 14px "微软雅黑";
+        }
+        
+        tbody tr {
+            background-color: #f0f0f0;
+        }
+        
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #fafafa;
+        } */
+        
+        a {
+            text-decoration: none;
+            font-size: 14px;
+        }
+        /* .nav {
+            margin: 100px;
+        }
+        
+        .nav>li {
+            position: relative;
+            float: left;
+            width: 80px;
+            height: 41px;
+            text-align: center;
+        }
+        
+        .nav li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 41px;
+            color: #333;
+        }
+        
+        .nav>li>a:hover {
+            background-color: #eee;
+        }
+        
+        .nav ul {
+            display: none;
+            position: absolute;
+            top: 41px;
+            left: 0;
+            width: 100%;
+            border-left: 1px solid #FECC5B;
+            border-right: 1px solid #FECC5B;
+        }
+        
+        .nav ul li {
+            border-bottom: 1px solid #FECC5B;
+        }
+        
+        .nav ul li a:hover {
+            background-color: #FFF5DA;
+        }
+        
+        body {
+            padding: 100px;
+        }
+        
+        textarea {
+            width: 200px;
+            height: 100px;
+            border: 1px solid pink;
+            outline: none;
+            resize: none;
+        }
+        
+        ul {
+            margin-top: 50px;
+        }
+        
+        li {
+            width: 300px;
+            padding: 5px;
+            background-color: rgb(245, 209, 243);
+            color: red;
+            font-size: 14px;
+            margin: 15px 0;
+        }
+        
+        li a {
+            float: right;
+        } */
+        /* table {
+            width: 500px;
+            margin: 100px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        
+        td,
+        th {
+            border: 1px solid #333;
+        }
+        
+        thead tr {
+            height: 40px;
+            background-color: #ccc;
+        } */
+        /* body {
+            height: 3000px;
+        }
+        
+        img {
+            position: absolute;
+        } */
+        
+        .search {
+            position: relative;
+            width: 178px;
+            margin: 100px;
+        }
+        
+        .con {
+            display: none;
+            position: absolute;
+            top: -40px;
+            width: 171px;
+            border: 1px solid rgba(0, 0, 0, .2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+            padding: 5px 0;
+            font-size: 18px;
+            line-height: 20px;
+            color: #333;
+        }
+        
+        .con::before {
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 28px;
+            left: 18px;
+            border: 8px solid #000;
+            border-style: solid dashed dashed;
+            border-color: #fff transparent transparent;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="search">
+        <div class="con">123</div>
+        <input type="text" placeholder="请输入您的快递单号" class="jd">
+    </div>
+    <!-- <input type="text"> -->
+    <!-- <img src="images/angel.gif" alt=""> -->
+    <!-- 春眠不觉晓 -->
+    <!-- <ul>
+        <li>知否知否</li>
+        <li>知否知否</li>
+        <li>知否知否</li>
+        <li>知否知否</li>
+        <li>知否知否</li>
+    </ul> -->
+    <!-- <div>123</div>
+    <a href="http://www.baidu.com">百度</a>
+    <form action="http://www.baidu.com">
+        <input type="submit" value="提交" name="sub">
+    </form> -->
+    <!-- <ul>
+        <li>123</li>
+        <li>123</li>
+        <li>123</li>
+    </ul>
+    <div>123</div> -->
+    <!-- <div class="father"> 555
+        <div class="son">8888</div>
+    </div> -->
+    <!-- <div>1</div>
+    <div>2</div>
+    <div>3</div> -->
+    <!-- <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>科目</th>
+                <th>成绩</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table> -->
+    <!-- <textarea name="" id=""></textarea>
+    <button>发布</button>
+    <ul>
+
+    </ul> -->
+    <!-- <ul class="nav">
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>
+                    <a href="">私信</a>
+                </li>
+                <li>
+                    <a href="">评论</a>
+                </li>
+                <li>
+                    <a href="">@我</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>
+                    <a href="">私信</a>
+                </li>
+                <li>
+                    <a href="">评论</a>
+                </li>
+                <li>
+                    <a href="">@我</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>
+                    <a href="">私信</a>
+                </li>
+                <li>
+                    <a href="">评论</a>
+                </li>
+                <li>
+                    <a href="">@我</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>
+                    <a href="">私信</a>
+                </li>
+                <li>
+                    <a href="">评论</a>
+                </li>
+                <li>
+                    <a href="">@我</a>
+                </li>
+            </ul>
+        </li>
+    </ul> -->
+    <!-- <div class="wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" id="j_cbAll" />
+                    </th>
+                    <th>商品</th>
+                    <th>价钱</th>
+                </tr>
+            </thead>
+            <tbody id="j_tb">
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>iPhone8</td>
+                    <td>8000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>iPad Pro</td>
+                    <td>5000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>iPad Air</td>
+                    <td>2000</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" />
+                    </td>
+                    <td>Apple Watch</td>
+                    <td>2000</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div> -->
+    <!-- <table>
+        <thead>
+            <tr>
+                <th>代码</th>
+                <th>名称</th>
+                <th>最新公布净值</th>
+                <th>累计净值</th>
+                <th>前单位净值</th>
+                <th>净值增长率</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>003526</td>
+                <td>农银金穗3个月定期开放债券</td>
+                <td>1.075</td>
+                <td>1.079</td>
+                <td>1.074</td>
+                <td>+0.047%</td>
+            </tr>
+            <tr>
+                <td>003526</td>
+                <td>农银金穗3个月定期开放债券</td>
+                <td>1.075</td>
+                <td>1.079</td>
+                <td>1.074</td>
+                <td>+0.047%</td>
+            </tr>
+            <tr>
+                <td>003526</td>
+                <td>农银金穗3个月定期开放债券</td>
+                <td>1.075</td>
+                <td>1.079</td>
+                <td>1.074</td>
+                <td>+0.047%</td>
+            </tr>
+            <tr>
+                <td>003526</td>
+                <td>农银金穗3个月定期开放债券</td>
+                <td>1.075</td>
+                <td>1.079</td>
+                <td>1.074</td>
+                <td>+0.047%</td>
+            </tr>
+            <tr>
+                <td>003526</td>
+                <td>农银金穗3个月定期开放债券</td>
+                <td>1.075</td>
+                <td>1.079</td>
+                <td>1.074</td>
+                <td>+0.047%</td>
+            </tr>
+            <tr>
+                <td>003526</td>
+                <td>农银金穗3个月定期开放债券</td>
+                <td>1.075</td>
+                <td>1.079</td>
+                <td>1.074</td>
+                <td>+0.047%</td>
+            </tr>
+        </tbody>
+    </table> -->
+    <!-- <ul class="baidu">
+        <li><img src="images/1.jpg" alt=""></li>
+        <li><img src="images/2.jpg" alt=""></li>
+        <li><img src="images/3.jpg" alt=""></li>
+        <li><img src="images/4.jpg" alt=""></li>
+    </ul> -->
+    <!-- <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+    <button>按钮5</button> -->
+    <script>
+        // 京东快递单号查询
+        var con = document.querySelector('.con');
+        var jd_input = document.querySelector('.jd');
+        jd_input.addEventListener('keyup', function() {
+            if (this.value == '') {
+                con.style.display = 'none';
+            } else {
+                con.style.display = 'block';
+                con.innerText = this.value;
+            }
+        });
+        jd_input.addEventListener('blur', function() { // 失去焦点
+            con.style.display = 'none';
+        });
+        jd_input.addEventListener('focus', function() { // 获得焦点
+            if (this.value !== '') {
+                con.style.display = 'block';
+            }
+        });
+        // // 京东按键输入
+        // var search = document.querySelector('input');
+        // document.addEventListener('keyup', function(e) {
+        //     // console.log(e.keyCode);
+        //     if (e.keyCode === 83) {
+        //         search.focus();
+        //     }
+        // });
+
+
+        // // keyCode
+        // document.addEventListener('keyup', function(e) {
+        //     console.log('up:' + e.keyCode);
+        //     if (e.keyCode === 65) {
+        //         alert('你按下a');
+        //     } else {
+        //         alert('你没按下a');
+        //     }
+        // })
+        // document.addEventListener('keypress', function(e) {
+        //     console.log('press' + e.keyCode);
+        // })
+
+
+        // // 常用键盘事件
+        // // 1 
+        // document.addEventListener('keyup', function() {
+        //     // console.log((''));
+        // });
+        // // 2 
+        // document.addEventListener('keydown', function() {})
+        //     // 3
+        // document.addEventListener('keypress', function() {})
+        //     // 4 执行顺序 keydown -- keypress -- keyup
+
+
+        // // 跟随鼠标的天使
+        // var pic = document.querySelector('img');
+        // document.addEventListener('mousemove', function(e) {
+        //     var x = e.pageX;
+        //     var y = e.pageY;
+        //     // 千瓦不要忘记加px单位
+        //     pic.style.left = x - 50 + 'px';
+        //     pic.style.top = y - 40 + 'px';
+        // })
+
+
+        // // 鼠标事件对象 MouseEvent
+        // document.addEventListener('click', function(e) {
+        //     //1 可视区
+        //     console.log(e.clientX);
+        //     console.log(e.clientY);
+        //     //2 文档整体
+        //     console.log(e.pageX);
+        //     console.log(e.pageY);
+        // })
+
+
+        // // 1 contextmenu 可以禁用右键菜单
+        // document.addEventListener('contextmenu', function(e) {
+        //     e.preventDefault();
+        // });
+        // // 2 禁止选中文字
+        // document.addEventListener('selectstart', function(e) {
+        //     e.preventDefault();
+        // });
+
+
+        // // 事件委托核心原理：给父节点添加侦听器，利用时间冒泡影响每一个子节点
+        // var ul = document.querySelector('ul');
+        // ul.addEventListener('click', function(e) {
+        //     // alert('知否知否');
+        //     // e.target可以得到点击的对象
+        //     e.target.style.backgroundColor = 'pink';
+        // });
+
+
+        // // 常见事件对象的属性和方法
+        // // 1 返回事件类型
+        // var div = document.querySelector('div');
+        // div.addEventListener('click', fn);
+        // div.addEventListener('mouseover', fn);
+        // div.addEventListener('mouseout', fn);
+
+        // function fn(e) {
+        //     console.log(e.type);
+        // }
+        // // 2 阻止默认行为（事件） 让链接不跳转 或者让提交按钮不提交
+        // var a = document.querySelector('a');
+        // a.addEventListener('click', function(e) {
+        //     e.preventDefault(); //  dom 标准写法
+        // });
+        // // 1 
+        // var li = document.querySelectorAll('li');
+        // li.addEventListener('click', function(e) {
+        //     console.log(this);
+        //     console.log(e.target);
+        // });
+        // // 事件对象
+        // var div = document.querySelector('div');
+        // div.onclick = function(event) {
+        //     console.log(event);
+        // }
+        // div.addEventListener('click', function(e) {
+        //     console.log(e);
+        // })
+
+
+        // dom事件流三个阶段
+        // // 捕获阶段addEventListener第三个参数是true
+        // var son = document.querySelector('.son');
+        // son.addEventListener('click', function() {
+        //     alert('son');
+        // }, true);
+        // var father = document.querySelector('.father');
+        // father.addEventListener('click', function() {
+        //     alert('father');
+        // }, true);
+        // // 捕获阶段addEventListener第三个参数是 false
+        // var son = document.querySelector('.son');
+        // son.addEventListener('click', function(e) {
+        //     alert('son');
+        //     e.stopPropagation(); // stop停止  propagation传播
+        //     e.cancelBubble = true; // 兼容写法 cancel取消 bubble冒泡
+        // }, false);
+        // var father = document.querySelector('.father');
+        // father.addEventListener('click', function() {
+        //     alert('father');
+        // }, false);
+        // document.addEventListener('click', function() {
+        //     alert('document');
+        // })
+
+
+        // var divs = document.querySelectorAll('div');
+        // divs[0].onclick = function() {
+        //         alert(11);
+        //         // 1 传统方式删除事件
+        //         divs[0].onclick = null;
+        //     }
+        //     // 2 removeEcentListener 删除事件
+        // divs[1].addEventListener('click', fn) // 里面的fn调用时不需要加小括号
+        // function fn() {
+        //     alert(22);
+        //     divs[1].removeEventListener('click', fn);
+        // }
+        // // 3 
+        // divs[2].attachEvent('onclick', fn1);
+
+        // function fn1() {
+        //     alert(33);
+        //     divs[2].detachEvent('onclick', fn1);
+        // }
+
+
+
+        // // 1 准备好学生数据   动态生成表格案例
+        // var datas = [{
+        //     name: '魏婴',
+        //     subject: 'JavaScript',
+        //     score: 100
+        // }, {
+        //     name: '蓝湛',
+        //     subject: 'JavaScript',
+        //     score: 110
+        // }, {
+        //     name: '江澄',
+        //     subject: 'JavaScript',
+        //     score: 110
+        // }, {
+        //     name: '谢怜',
+        //     subject: 'JavaScript',
+        //     score: 110
+        // }];
+        // // 2 往tbody里面创建行： 有几个人(通过数组的长度)我们就创建几行
+        // var tbody = document.querySelector('tbody');
+        // for (var i = 0; i < datas.length; i++) { // 外面的for循环管行tr
+        //     // 1 创建 tr行
+        //     var tr = document.createElement('tr');
+        //     tbody.appendChild(tr);
+        //     // 2 行里面创建单元格td，单元格数量取决于每个对象里的属性个数。for循环遍历对象datas[i]
+        //     for (var k in datas[i]) { // for循环管列td
+        //         // 创建单元格
+        //         var td = document.createElement('td');
+        //         // 把对象里的属性值datas[i][k]给td
+        //         td.innerHTML = datas[i][k];
+        //         tr.appendChild(td);
+        //     }
+        //     // 3 创建有删除两字的单元格
+        //     var td = document.createElement('td');
+        //     td.innerHTML = '<a href="javascript:;">删除</a>';
+        //     tr.appendChild(td);
+        // }
+        // // 4 删除操作
+        // var as = document.querySelectorAll('a');
+        // for (var i = 0; i < as.length; i++) {
+        //     as[i].onclick = function() {
+        //         // 点击a 删除 当前a 所在的行(链接的爸爸的爸爸)  node.removeChild(child) 
+        //         tbody.removeChild(this.parentNode.parentNode);
+        //     }
+        // }
+        // for(var k in obj) {
+        //     k 得到的是属性名
+        //     obj[k] 得到是属性值
+        // }
+
+
+        // // 1 简单留言板
+        // var btn = document.querySelector('button');
+        // var text = document.querySelector('textarea');
+        // var ul = document.querySelector('ul');
+        // // 2 注册事件
+        // btn.onclick = function() {
+        //     if (text.value == '') {
+        //         alert('您没有输入内容');
+        //         return false;
+        //     } else {
+        //         // (1) 创建元素
+        //         var li = document.createElement('li');
+        //         // 先有li，才能赋值
+        //         li.innerHTML = text.value + "<a href='javascript:;'>删除</a>";
+        //         // (2) 添加元素
+        //         // ul.appendChild(li);
+        //         ul.insertBefore(li, ul.children[0]);
+        //         // (3) 删除元素，删除当前链接的li
+        //         var as = document.querySelectorAll('a');
+        //         for (var i = 0; i < as.length; i++) {
+        //             as[i].onclick = function() {
+        //                 // node.removeChild(child); 删除的是li，当前a所在的li，this.parentNode
+        //                 ul.removeChild(this.parentNode);
+        //             }
+        //         }
+        //     }
+        // }
+
+
+        // // 1 获取元素
+        // var nav = document.querySelector('.nav');
+        // var lis = nav.children; // 得到四个li
+        // // 2 循环注册事件
+        // for (var i = 0; i < lis.length; i++) {
+        //     lis[i].onmouseover = function() {
+        //         this.children[1].style.display = 'block';
+        //     }
+        //     lis[i].onmouseout = function() {
+        //         this.children[1].style.display = 'none';
+        //     }
+        // }
+
+
+        // // 1 获取元素
+        // var j_cbAll = document.getElementById('j_cbAll');
+        // var j_tbs = document.getElementById('j_tb').getElementsByTagName('input');
+        // // 注册事件
+        // j_cbAll.onclick = function() {
+        //         // this.checked 它可以得到当前复选框的选中状态如果是true 就是选中，如果是false 就是未选中
+        //         for (var i = 0; i < j_tbs.length; i++) {
+        //             j_tbs[i].checked = this.checked;
+        //         }
+        //     }
+        //     // 2
+        // for (var i = 0; i < j_tbs.length; i++) {
+        //     j_tbs[i].onclick = function() {
+        //         // flag 控制是否全选中
+        //         var flag = true;
+        //         // 每次点击都要循环检查
+        //         for (var i = 0; i < j_tbs.length; i++) {
+        //             if (!j_tbs[i].checked) {
+        //                 flag = false;
+        //                 break; // 提高执行效率。因为只要有一个没有选中，剩下的就无需循环判断了。
+        //             }
+        //         }
+        //         j_cbAll.checked = flag;
+        //     }
+        // }
+
+
+        // // 1 获取tbody里所有的行
+        // var trs = document.querySelector('tbody').querySelectorAll('tr');
+        // // 2 循环绑定注册事件
+        // for (var i = 0; i < trs.length; i++) {
+        //     // 3 鼠标经过事件onmouseover
+        //     trs[i].onmouseover = function() {
+        //             this.className = 'bg';
+        //         }
+        //         // 4 鼠标离开 onmouseout
+        //     trs[i].onmouseout = function() {
+        //         this.className = '';
+        //     }
+        // }
+
+
+        // // 1 获取元素
+        // var imgs = document.querySelector('.baidu').querySelectorAll('img');
+        // // 2 循环注册事件
+        // for (var i = 0; i < imgs.length; i++) {
+        //     imgs[i].onclick = function() {
+        //         // this.src就是我们点击图片的路径 = images/2.jpg
+        //         document.body.style.backgroundImage = 'url(' + this.src + ')';
+        //     }
+        // }
+
+
+        // // 1
+        // var btns = document.getElementsByTagName('button');
+        // // btns得到伪数组
+        // for (var i = 0; i < btns.length; i++) {
+        //     btns[i].onclick = function() {
+        //         // 先清空所有颜色
+        //         for (var i = 0; i < btns.length; i++) {
+        //             btns[i].style.backgroundColor = '';
+        //         }
+        //         this.style.backgroundColor = 'pink';
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

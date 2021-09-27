@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 遍历旧数组，拿着旧数组的元素去查询新数组，如果该元素在新数组里面没有出现过，就添加进新数组，否则不添加。
+        // 如何知道元素是否存在？————利用新数组indexOf(数组元素)，如果返回值为-1，则没有该元素
+
+        // 封装一个去重函数
+        function unipue(arr) {
+            var newArr = [];
+            for (var i = 0; i < arr.length; i++) {
+                if (newArr.indexOf(arr[i]) === -1) {
+                    newArr.push(arr[i]);
+                }
+            }
+            return newArr;
+        }
+        var demo = unipue(['c', 'a', 'z', 'a', 'x', 'a', 'x', 'c', 'b']);
+        console.log(demo);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

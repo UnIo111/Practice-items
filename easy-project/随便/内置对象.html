@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 字符转换为数组split('分隔符')   前面学过把数组转换为字符串join
+        var str2 = 'red, pink, blue';
+        console.log(str2.split(','));
+        var str3 = 'red&pink&blue';
+        console.log(str3.split('&'));
+
+        // 替换字符 replace('被替换的字符'，'替换为的字符')  只会替换第一个字符
+        var str = 'andyandy';
+        console.log(str.replace('a', 'b'));
+        var str1 = 'abcoefoxyozzopp';
+        while (str1.indexOf('o') !== -1) {
+            str1 = str1.replace('o', '*');
+        }
+        console.log(str1);
+
+        // concat 链接字符串
+        var str = 'andy';
+        console.log(str.concat('red'));
+
+        // substr('截取的起始位置'，'截取几个字符');
+        var str1 = '改革春风吹满地';
+        console.log(str1.substr(2, 2));
+
+        // 统计次数出现最多的字符和次数
+        var abc = 'abcoefoxyozzopp';
+        var o = {};
+        for (var i = 0; i < abc.length; i++) {
+            var chars = abc.charAt(i); // cahrs是字符串的每一个字符
+            if (o[chars]) { // o[chars]得到的是属性值
+                o[chars]++;
+            } else {
+                o[chars] = 1;
+            }
+        }
+        console.log(o);
+        var max = 0; // 遍历对象
+        var ch = '';
+        for (var k in o) {
+            if (o[k] > max) {
+                max = o[k];
+                ch = k;
+            }
+        }
+        console.log(max);
+        console.log('最多的字符是' + ch);
+        // var o = {
+        //     age: 18
+        // }
+        // if (o['age']) {
+        //     console.log('you');
+        // } else {
+        //     console.log('wu');
+        // }
+
+        console.log('');
+        // 根据位置返回字符
+        // 1 charAt(index) 
+        var str = 'andy';
+        console.log(str.charAt(3));
+        // 遍历所有字符
+        for (var i = 0; i < str.length; i++) {
+            console.log(str.charAt(i));
+        }
+        // 2 charCodeAt(index) 返回相应索引号的字符ASCII值 目的：判断用户按下哪个键
+        console.log(str.charCodeAt(0));
+        // 3 str[index] H5新增的
+        console.log(str[0]);
+
+        console.log('');
+
+        // 字符串对象  根据字符返回位置
+        var str = '改革春风吹满地，春天来了';
+        console.log(str.indexOf('春'));
+        console.log(str.indexOf('春', 3)); // 从索引号3往后查找
+        // 案例查找字符串中所有o出现的位置以及次数
+        var str = "abcoefoxyozzopp";
+        var index = str.indexOf('o');
+        var num = 0;
+        // console.log(index);
+        while (index !== -1) {
+            console.log(index);
+            num++;
+            index = str.indexOf('o', index + 1);
+        }
+        console.log('o出现的次数是' + num);
+
+        console.log('');
+
+        // 基本包装类型：把简单数据类型包装为复杂数据类型
+
+        // 数组去重转换为字符串
+        // 1 toString() 
+        var arr = [1, 2, 3];
+        console.log(arr.toString()); // 1,2,3
+        //2 join(分隔符) 
+        var arr1 = [33, 44, 55];
+        console.log(arr1.join());
+        console.log(arr1.join('-'));
+        console.log(arr1.join('&'));
+
+        // indexOf 返回数组元素索引号方法，只返回第一个满足条件的索引号，找不到元素返回-1
+        var arr = [22, 33, 44, 55, 66, 44];
+        // var arr = [22, 33, 55, 66];
+        console.log(arr.indexOf(44));
+        // lastIndexOf 从后面查找
+        console.log(arr.lastIndexOf(44));
+
+        // 翻转数组
+        var arr = [22, 33, 44];
+        arr.reverse();
+        console.log(arr);
+        // 数组排序
+        var arr1 = [13, 4, 77, 1, 7];
+        arr1.sort(function(a, b) { // 记住就行
+            // return a - b; // 升序
+            return b - a; // 降序
+        });
+        console.log(arr1);
+
+
+        // 删除2000以上的工资
+        var arr = [1500, 1200, 2000, 2100, 1800];
+        var newArr = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] < 2000) {
+                // newArr[newArr.length] = arr[i];
+                newArr.push(arr[i]);
+            }
+        }
+        console.log(newArr);
+
+        // 添加和删除元素
+        // ！！！！！！！！！！！！！！
+        // 1 push() 末尾
+        var arr = [1, 2, 3];
+        // arr.push(4, 'pink');
+        console.log(arr.push(4, 'pink')); // push完毕之后，返回的结果是新数组的长度
+        console.log(arr);
+        // 2 unshift 开头
+        arr.unshift('red');
+        console.log(arr);
+        // 3 pop() 一次只能删除最后一个
+        console.log(arr.pop());
+        console.log(arr);
+        // 4 shift() 一次删除第一个元素
+        console.log(arr.shift());
+        console.log(arr);
+        console.log('');
+
+
+        // 检测是否为数组  (1)
+        function reverse(arr) {
+            if (arr instanceof Array) {
+                var newArr = [];
+                for (var i = arr.length - 1; i >= 0; i--) {
+                    newArr[newArr.length] = arr[i];
+                }
+                return newArr
+            } else {
+                return 'error 这个参数要求必须是数组格式 [1,2,3]'
+            }
+        }
+        console.log(reverse([1, 2, 3]));
+        console.log(reverse(1, 2, 3));
+        var arr = [];
+        var obj = {};
+        console.log(arr instanceof Array);
+        console.log(obj instanceof Array);
+        // (2) ie9以上才支持
+        console.log(Array.isArray(arr));
+        console.log(Array.isArray(obj));
+
+
+        // 1
+        var arr = [1, 2, 3];
+        console.log(arr[0]);
+        // 2
+        // var arr1 = new Array();
+        // var arr1 = new Array(2); // 这个二表示数组长度为二，里面有两个空数组元素
+        var arr1 = new Array(2, 3); // 等价于 [2,3]
+        console.log(arr1);
+
+        var haomiao = new Date();
+        console.log(haomiao.valueOf()); // 距离1970的总毫秒
+        console.log(haomiao.getTime());
+        // 2 最常用的是:
+        var date1 = +new Date();
+        console.log(date1);
+        // 3 H5新增的获得总毫秒数
+        console.log(Date.now());
+
+        var time = new Date();
+        console.log(time.getHours());
+        console.log(time.getMinutes());
+        console.log(time.getSeconds());
+
+        function getTime() {
+            var study = new Date();
+            var h = study.getHours();
+            h = h < 10 ? '0' + h : h;
+            var m = study.getMinutes();
+            m = m < 10 ? '0' + m : m;
+            var s = study.getSeconds();
+            s = s < 10 ? '0' + s : s;
+            return h + ':' + m + ':' + 5;
+        }
+        console.log(getTime());
+
+        var date1 = new Date();
+        console.log(date1.getFullYear()); // 返回当前日期的年
+        console.log(date1.getMonth() + 1); // 返回的月份小一个月
+        console.log(date1.getDate());
+        console.log(date1.getDay());
+        var year = date1.getFullYear();
+        var month = date1.getMonth() + 1;
+        var dates = date1.getDate();
+        var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+        var day = date1.getDay();
+        console.log('今天是：' + year + '年' + month + '月' + dates + '日 ' + arr[day]);
+
+        var birthday = new Date('1995-12-17T03:24:00');
+        console.log(birthday);
+        var date = new Date('2021-7-27 8:8:8');
+        console.log(date);
+
+
+
+        // 猜数字游戏
+        // var random = getRandom(1, 50);
+        // for (i = 1; i <= 10; i++) { // 死循环
+        //     var num = prompt('你来猜？输入1~50之间的一个数字');
+        //     if (num > random) {
+        //         alert('你猜大了');
+        //     } else if (num < random) {
+        //         alert('你猜小了');
+        //     } else {
+        //         alert('猜对了，恭喜');
+        //         break; // 退出整个循环结束程序
+        //     }
+        // }
+        // var random = getRandom(1, 10);
+        // while (true) { // 死循环
+        //     var num = prompt('你来猜？输入1~10之间的一个数字');
+        //     if (num > random) {
+        //         alert('你猜大了');
+        //     } else if (num < random) {
+        //         alert('你猜小了');
+        //     } else {
+        //         alert('猜对了，恭喜');
+        //         break; // 退出整个循环结束程序
+        //     }
+        // }
+
+
+
+        var myMath = {
+            PI: 3.141592653,
+            max: function() {
+                var max = arguments[0];
+                for (var i = 1; i < arguments.length; i++) {
+                    if (arguments[i] > max) {
+                        max = arguments[i];
+                    }
+                }
+                return max;
+            },
+            min: function() {
+                var min = arguments[0];
+                for (var i = 1; i < arguments.length; i++) {
+                    if (arguments[i] < min) {
+                        min = arguments[i];
+                    }
+                }
+                return min;
+            }
+        }
+        console.log(myMath.PI);
+        console.log(myMath.min(1, 5, 9));
+        console.log(myMath.max(3, 4, 8));
+        console.log(Math.max(1, 99, 5));
+
+        // 绝对值方法
+        console.log(Math.abs(-1));
+        console.log(Math.abs('-1')); // 隐式转换，会把字符串型-1转换为数字型
+        console.log(Math.abs('pink')); // NaN
+
+        // 取整
+        console.log(Math.floor(1.9)); // 向下取整
+        console.log(Math.ceil(1.9)); // ceil:天花板，向上取整
+        console.log(Math.round(4.5)); // 四舍五入
+        console.log(Math.round(-1.5)); // 其他数字都是四舍五入，但五往大了取
+        console.log(Math.round(-1.1)); // 四舍五入
+
+        // 两个数之间的随机整数且包含
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        console.log(getRandom(1, 10));
+        // 随机点名
+        var arr = ['333', '111', 'hhh', 'pinkls'];
+        // console.log(arr[0]);
+        console.log(arr[getRandom(0, arr.length - 1)]);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

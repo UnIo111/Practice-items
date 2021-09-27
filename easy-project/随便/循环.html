@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var money = 100;
+        var num = prompt('请输入您要的操作：' + '\n' + '1.存钱' + '\n' + '2.取钱' + '\n' + '3.显示余额' + '\n' + '4.退出');
+        if (num === '1') {
+            var change = prompt('存多少');
+            money += parseFloat(change);
+            alert('余额为' + money);
+        } else if (num === '2') {
+            var change = prompt('取多少');
+            money -= change;
+            alert('余额为' + money);
+        } else if (num === '3') {
+            alert('余额为' + money);
+        } else if (num === '4') {
+            alert('您已退出');
+        }
+
+        /* do {
+            var user = prompt('输入用户名');
+            var password = prompt('密码');
+        } while (user !== 'admin' && password !== '123456')
+        alert('登陆成功'); */
+        /* var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 == 0) {
+                continue;
+            }
+            sum += i;
+        }
+        console.log(sum);
+        for (var i = 1; i <= 5; i++) {
+            if (i == 3) {
+                break;
+            }
+            console.log(i);
+        }
+        for (var i = 1; i <= 5; i++) {
+            if (i == 3) {
+                continue;
+            }
+            console.log(i);
+        }
+        var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 7 == 0) {
+                continue;
+            }
+            sum += i;
+        }
+        console.log(sum); */
+        /* var i = 1;
+        do {
+            console.log('这个人今年' + i + '岁了');
+            i++;
+        } while (i <= 100)
+        var sum = 0;
+        var j = 1;
+        do {
+            sum += j;
+            j++;
+        } while (j <= 100)
+        console.log(sum);
+        do {
+            var message = prompt('你爱我吗');
+        } while (message !== '我爱你')
+        alert('me too'); */
+        /* var message = prompt('你爱我吗');
+        while (message !== '我爱你') {
+            message = prompt('你爱我吗');
+        }
+        alert('me too'); */
+        /* var j = 1;
+        var sum = 0;
+        while (j <= 100) {
+            sum += j;
+            j++;
+        }
+        console.log(sum); */
+        /* var i = 1;
+        while (i <= 100) {
+            console.log('这个人今年' + i + '岁了');
+            i++;
+        } */
+
+        /* var str = '';
+        for (var i = 1; i <= 9; i++) {
+            for (var j = 1; j <= i; j++) {
+                // 1 × 2 = 2
+                // str = str + '★';
+                str += j + '×' + i + '=' + i * j + '\t';
+            }
+            str += '\n';
+        }
+        console.log(str); //九九乘法表 */
+
+        /* var str = '';
+        for (var i = 1; i <= 10; i++) {
+            for (var j = i; j <= 10; j++) {
+                str = str + '★';
+            }
+            str += '\n';
+        }
+        console.log(str); //倒三角 */
+
+        /* var str = '';
+        for (var i = 1; i <= 10; i++) {
+            for (var j = 1; j <= i; j++) {
+                str = str + '★';
+            }
+            str += '\n';
+        }
+        console.log(str); //正三角 */
+
+        /* var rows = prompt('请输入星星行数');
+        var cols = prompt('请输入星星列数');
+        var str = '';
+        for (var i = 1; i <= rows; i++) {
+            for (var j = 1; j <= cols; j++) {
+                str = str + '★';
+            }
+            str = str + '\n';
+        }
+        console.log(str); */
+
+        /* var num = prompt('请输入班级总人数');
+        var sum = 0;
+        var average = 0;
+        for (var i = 1; i <= num; i++) {
+            var score = prompt('请输入第' + i + '个学生成绩');
+            sum = sum + parseFloat(score);
+        }
+        average = sum / num;
+        alert('班级总的成绩是' + sum);
+        alert('班级平均成绩是' + average); */
+
+        /* var result = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 == 0) {
+                result = result + i
+            }
+        }
+        console.log('1~100之间能够被三整除' + result); */
+
+        /* var even = 0;
+        var odd = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                even = even + i;
+            } else {
+                odd = odd + i;
+            }
+        }
+        console.log('1~100之间所有偶数和' + even);
+        console.log('1~100之间所有奇数和' + even); */
+
+        /* var sum = 0;
+        var average = 0;
+        for (var i = 1; i <= 100; i++) {
+            // sum = sum + i;
+            sum += i
+        }
+        average = sum / 100;
+        console.log(average); */
+
+        /* for (var i = 1; i <= 100; i++) {
+            console.log('你好吗');
+        } */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

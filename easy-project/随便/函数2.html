@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Cars(wei, col, trade) {
+            this.weight = wei;
+            this.color = col;
+            this.trademark = trade;
+            this.driving = function(drive) {
+                console.log(drive);
+            }
+            this.pickup = function(pick) {
+                console.log(pick);
+            }
+            this.ploughing = function(plough) {
+                console.log(plough);
+            }
+        }
+        var car = new Cars('500kg', 'lightpink', 'Porsche'); // 车对象
+        console.log(car.weight);
+        console.log(car['color']);
+        car.pickup('拉货');
+        console.log('');
+
+        var button = new Object(); // 按钮对象
+        button.width = '20px';
+        button.heigth = '10px';
+        button.bgc = 'pink';
+        button.click = function() {
+            console.log('点击');
+        }
+        console.log(button.width);
+        console.log(button['bgc']);
+        button.click();
+        console.log('');
+
+        var computer = { // 电脑对象
+            color: 'black',
+            weight: '200g',
+            modle: 'lenovo',
+            fun: function() {
+                console.log('打游戏，听音乐，看电影，敲代码');
+            }
+        }
+        console.log(computer.modle);
+        console.log(computer['weight']);
+        computer.fun();
+        console.log('');
+
+
+        // 遍历对象
+        var obj = {
+            name: 'pink老师',
+            age: 18,
+            sex: '男',
+            fn: function() {
+
+            }
+        }
+        for (var k in obj) { // for in 遍历对象
+            console.log(k); // k 变量
+            console.log(obj[k]); // obj[k] 得到属性值
+        }
+
+
+        // 利用构造函数创造对象
+        function YingXiong(uname, type, blood) { // 创建王者荣耀对象
+            this.name = uname;
+            this.type = type;
+            this.blood = blood;
+            this.attack = function(gongji) {
+                console.log(gongji);
+            };
+        }
+        var lianpo = new YingXiong('廉颇', '力量型', 500);
+        console.log(lianpo.name);
+        lianpo.attack('近战');
+        var houyi = new YingXiong('后裔', '射手型', 100);
+        console.log(houyi['blood']);
+        houyi.attack('远程');
+
+        function Star(uname, age, sex) { // 创建四大天王对象
+            this.name = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function(sang) {
+                console.log(sang);
+            }
+        }
+        var ldh = new Star('刘德华', 18, '男'); // 构造函数不需要return就能返回结果
+        // console.log(typeof ldh);
+        console.log(ldh.name);
+        console.log(ldh['sex']);
+        ldh.sing('冰雨');
+        var zxy = new Star('张学友', 19, '男');
+        console.log(zxy.name);
+        console.log(zxy['age']);
+        zxy.sing('李香兰');
+
+        // 利用new Object创造对象
+        var naruto = new Object(); // 鸣人对象
+        naruto.mname = '鸣人';
+        naruto.sex = '男';
+        naruto.age = 19;
+        naruto.skil = function() {
+            console.log('影分身术');
+        }
+        console.log(naruto.age);
+        naruto.skil();
+
+        var obj = new Object(); // 创建了一个空的对象
+        obj.uname = '张三丰';
+        obj.age = 18;
+        obj.sex = '男';
+        obj.sayHi = function() {
+            console.log('hi~');
+        }
+        console.log(obj.uname);
+        console.log(obj['sex']);
+        obj.sayHi();
+        console.log('');
+
+        // 利用字面量创造对象
+        var gou = { // 狗对象
+            gname: '可可',
+            type: '阿拉斯加犬',
+            age: 5,
+            color: '棕红色',
+            skil: function() {
+                console.log('bark，showFilm');
+            }
+        }
+        console.log(gou.gname);
+        console.log(gou['type']);
+        gou.skil();
+        console.log('');
+
+        // var obj = {}; // 创建了一个空的对象
+        var obj = {
+            uname: '张三丰',
+            age: 18,
+            sex: '男',
+            sayHi: function() {
+                console.log('hi~');
+            }
+        }
+        console.log(obj.uname);
+        console.log(obj['age']);
+        obj.sayHi();
+
+        var fun = function(aru) {
+            console.log('函数表达式，匿名函数');
+            console.log(aru);
+        }
+        fun('pink老师');
+
+        function backDay() { // 用户输入年份，输出当前年份2月份的天数
+            var year = prompt('请输入年份:');
+            if (isRunYear(year)) {
+                alert('当前年份是闰年2月份有29天');
+            } else {
+                alert('当前年份是平年2月份有28天');
+            }
+        }
+        backDay();
+
+        function fn1() { // 函数相互调用
+            console.log(11);
+            fn2();
+        }
+        fn1();
+
+        function fn2() {
+            console.log(22);
+        }
+
+        function isRunYear(year) { // 利用函数判断闰年
+            var flag = false;
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                flag = true;
+            }
+            return flag;
+        }
+        console.log(isRunYear(2000));
+        console.log(isRunYear(1999));
+
+        function sort(arr) { //利用函数冒泡排序 sort排序
+            for (var i = 0; i < arr.length - 1; i++) {
+                for (var j = 0; j < arr.length - i - 1; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        var temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+        var arr1 = sort([1, 4, 2, 9]);
+        console.log(arr1);
+
+        function reverse(arr) { // 利用函数翻转数组 reverse
+            var newArr = [];
+            for (var i = arr.length - 1; i >= 0; i--) {
+                newArr[newArr.length] = arr[i];
+            }
+            return newArr;
+        }
+        var arr1 = reverse([1, 3, 4, 6, 9]);
+        console.log(arr1);
+        var arr2 = reverse(['red', 'blue', 'pink']);
+        console.log(arr2);
+
+        function getMax() {
+            var max = arguments[0];
+            for (var i = 1; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+        console.log(getMax(1, 2, 3));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
